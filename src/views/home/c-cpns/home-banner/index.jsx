@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
-import { BannerWarpper } from './style'
+import { BannerWrapper } from './style'
 
 const HomeBanner = memo(() => {
   return (
-    <BannerWarpper>
-    </BannerWarpper>
+    <BannerWrapper>
+    </BannerWrapper>
   )
 })
 

@@ -1,8 +1,10 @@
+import React, { memo, useEffect, useState } from 'react'
+
+import { RightWrapper } from './style'
 import IconAvatar from '@/assets/svg/icon-avatar'
 import IconGlobal from '@/assets/svg/icon-global'
 import IconMenu from '@/assets/svg/icon-menu'
-import React, { memo, useEffect, useState } from 'react'
-import { RightWrapper } from './style'
+
 
 const HeaderRight = memo(() => {
   /** 定义组件内部的转态 */
