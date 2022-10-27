@@ -5,12 +5,15 @@ import Rating from '@mui/material/Rating'
 import { ItemWrapper } from './style'
 
 const RoomItem = memo((props) => {
-  const { itemDate } = props
+  const { itemDate, itemWidth = '25%' } = props
   return (
-    <ItemWrapper>
+    <ItemWrapper
+      verifyColor={itemDate?.verify_info?.text_color ?? '#39576a'}
+      itemWidth={itemWidth}
+    >
       <div className='inner'>
         <div className='cover'>
-          <img src={itemDate.picture_url} alt="" />
+          <img src={itemDate?.picture_url} alt="" />
         </div>
         <div className='desc'>
           {itemDate.verify_info.messages.join('.')}
@@ -27,7 +30,10 @@ const RoomItem = memo((props) => {
             sx={{ fontSize: '12px', color: itemDate.star_rating_color, marginRight: '-1px' }}
           />
           <span className='count' >{itemDate.reviews_count}</span>
-          {itemDate.bottom_info && <span className='extra'>·{itemDate.bottom_info.content}</span>}
+          {
+            itemDate.bottom_info &&
+            <span className='extra'>·{itemDate.bottom_info.content}</span>
+          }
         </div>
       </div>
     </ItemWrapper>

@@ -21,6 +21,7 @@ export const RightWrapper = styled.div`
       cursor: pointer;
       box-sizing: content-box;
       font-weight: 600;
+      justify-content: center;
 
       &:hover{
         background-color: #f5f5f5;

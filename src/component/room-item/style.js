@@ -2,8 +2,9 @@ import styled from "styled-components";
 
 export const ItemWrapper = styled.div`
   box-sizing: border-box;
-  width: 25%;
+  width: ${props => props.itemWidth};
   padding: 8px;
+  flex-shrink: 0;
 
   .inner{
     width: 100%;
@@ -29,7 +30,7 @@ export const ItemWrapper = styled.div`
   .desc{
     padding-top: 8px;
     font-size: 12px;
-    color: #767676;
+    color: ${props => props.verifyColor};
     font-weight: 800;
     cursor: pointer;
   }

@@ -4,9 +4,11 @@ export const HomeWrapper = styled.div`
   > .content{
     width: 1032px;
     margin: 0 auto;
+    
+    > div {
+      margin-top: 40px;
+    }
   }
 
-  .good-price{
-    margin-top: 40px;
-  }
+  
 `
