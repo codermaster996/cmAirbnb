@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import ReactDOM from 'react-dom/client';
-import { HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
 import { ThemeProvider } from 'styled-components';
 import 'antd/dist/antd.less'
@@ -17,9 +17,9 @@ root.render(
   <Suspense fallback='Loging...'>
     <Provider store={store}>
       <ThemeProvider theme={theme}>
-        <HashRouter>
+        <BrowserRouter>
           <App />
-        </HashRouter>
+        </BrowserRouter>
       </ThemeProvider>
     </Provider>
   </Suspense>

@@ -1,32 +1,37 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-const Home = React.lazy(() => import("@/views/home"))
-const Entire = React.lazy(() => import("@/views/entire"))
-const Detail = React.lazy(() => import("@/views/detail"))
+import Demo from "@/views/demo";
+const Home = React.lazy(() => import("@/views/home"));
+const Entire = React.lazy(() => import("@/views/entire"));
+const Detail = React.lazy(() => import("@/views/detail"));
 
 
 const router = [
   {
     path: '/',
-    element: <Navigate to='/home' />
+    element: <Home />
   },
   {
     path: '/home',
-    element: <Home />
+    element: <Navigate to='/' />
   },
   {
     path: '/entire',
     element: <Entire />
   },
   {
-    path: '/detail',
+    path: '/detail/:id',
     element: <Detail />
+  },
+  {
+    path: '/demo',
+    element: <Demo />
   },
   // 重定向
   {
     path: '*',
-    element: <Navigate to='/home' />
+    element: <Navigate to='/' />
   }
 ]
 
