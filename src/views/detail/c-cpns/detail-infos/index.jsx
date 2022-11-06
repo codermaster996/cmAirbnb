@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types'
 import React, { memo } from 'react'
 
 const DetailInfos = memo((props) => {
@@ -6,7 +5,5 @@ const DetailInfos = memo((props) => {
     <div>DetailInfos</div>
   )
 })
-
-DetailInfos.propTypes = {}
 
 export default DetailInfos

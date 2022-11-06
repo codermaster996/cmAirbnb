@@ -15,12 +15,12 @@ const RoomItem = memo((props) => {
   const sliderRef = useRef()
 
   /** 事件处理的逻辑 */
-  function controlClickHandle(isRight = true, event) {
+  function controlClickHandle(isNext = true, event) {
     // 上一个面板/下一个面板
-    isRight ? sliderRef.current.next() : sliderRef.current.prev()
+    isNext ? sliderRef.current.next() : sliderRef.current.prev()
 
     // 最新的索引
-    let newIndex = isRight ? selectIndex + 1 : selectIndex - 1
+    let newIndex = isNext ? selectIndex + 1 : selectIndex - 1
     const length = itemDate.picture_urls.length
     if (newIndex < 0) newIndex = length - 1
     if (newIndex > length - 1) newIndex = 0

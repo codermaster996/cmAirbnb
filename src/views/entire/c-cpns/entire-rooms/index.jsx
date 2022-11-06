@@ -1,6 +1,8 @@
 import RoomItem from '@/component/room-item'
+import { changeDetailInfoAction } from '@/store/modules/detail'
 import PropTypes from 'prop-types'
 import React, { memo, useCallback } from 'react'
+import { useDispatch } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 
 import { RoomsWrapper } from './style'
@@ -8,11 +10,13 @@ import { RoomsWrapper } from './style'
 const EntireRooms = memo((props) => {
   const { roomList, totalCount, isLoading } = props
 
-  /** 事件处理函数 */
+  /** 事件处理 */
   const navigate = useNavigate()
+  const dispatch = useDispatch()
   const itemDateHandle = useCallback((item) => {
-    navigate(`/detail/8888`)
-  }, [navigate])
+    dispatch(changeDetailInfoAction(item))
+    navigate(`/detail/${item.id}`)
+  }, [navigate, dispatch])
 
   return (
     <RoomsWrapper>

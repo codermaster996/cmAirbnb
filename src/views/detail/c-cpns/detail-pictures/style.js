@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const PicturesWrapper = styled.div`
+  position: absolute;
+  top: 80px;
+  
   > .pictures{
     display: flex;
     height: 600px;
@@ -18,6 +21,7 @@ export const PicturesWrapper = styled.div`
       }
     }
   }
+  
 
   .left,.right{
     width: 50%;
@@ -66,5 +70,20 @@ export const PicturesWrapper = styled.div`
       border: 1px solid #000;
     }
   }
+
+  .show-btn{
+    position: absolute;
+    z-index: 999;
+    right: 15px;
+    bottom: 15px;
+    line-height: 22px;
+    font-weight: 800;
+    padding: 6px 15px;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,.1);
+    cursor: pointer;
+  }
+  
 
 `

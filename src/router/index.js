@@ -1,7 +1,6 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
 
-import Demo from "@/views/demo";
 const Home = React.lazy(() => import("@/views/home"));
 const Entire = React.lazy(() => import("@/views/entire"));
 const Detail = React.lazy(() => import("@/views/detail"));
@@ -23,10 +22,6 @@ const router = [
   {
     path: '/detail/:id',
     element: <Detail />
-  },
-  {
-    path: '/demo',
-    element: <Demo />
   },
   // 重定向
   {

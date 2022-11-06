@@ -7,6 +7,7 @@ import EntirePagination from './c-cpns/entire-pagination'
 import EntireRooms from './c-cpns/entire-rooms'
 import { fetchRoomListAction } from '@/store/modules/entire/actionCreators'
 import { isEmptyO } from '@/utils'
+import { changeHeaderConfigAction } from '@/store/modules/main'
 
 const Entire = memo(() => {
   /** 从redux中获取数据 */
@@ -21,8 +22,8 @@ const Entire = memo(() => {
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(fetchRoomListAction())
-    // 初始化(回到顶部)
-    window.scrollTo(0, 0)
+    // 修改header页面配置
+    dispatch(changeHeaderConfigAction({ isFixed: true, topAlpha: false }))
   }, [dispatch])
 
   return (

@@ -6,7 +6,7 @@ export const RightWrapper = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  color:${props => props.theme.text.primaryColor};
+  color:${props => props.theme.isAlpha ? '#fff' : props.theme.text.primaryColor};
 
   .btns{
     display: flex;
@@ -24,7 +24,7 @@ export const RightWrapper = styled.div`
       justify-content: center;
 
       &:hover{
-        background-color: #f5f5f5;
+        background-color: ${props => props.theme.isAlpha ? 'rgba(255,255,255,.2)' : '#f5f5f5'};
       }
     }
 
