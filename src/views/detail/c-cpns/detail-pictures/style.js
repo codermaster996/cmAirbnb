@@ -1,9 +1,8 @@
 import styled from "styled-components";
 
 export const PicturesWrapper = styled.div`
-  position: absolute;
-  top: 80px;
-  
+  position: relative;
+
   > .pictures{
     display: flex;
     height: 600px;

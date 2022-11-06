@@ -44,7 +44,7 @@ const HeaderRight = memo(() => {
         {
           showPanel && (
             <div className='panel'>
-              <div className='top'>
+              <div className='panel-top'>
                 <div className='item register'>注册</div>
                 <div className='item login'>登陆</div>
               </div>

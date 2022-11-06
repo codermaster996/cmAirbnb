@@ -3,7 +3,7 @@ import { isEmptyO } from '@/utils'
 import React, { memo, useEffect } from 'react'
 import { shallowEqual, useDispatch, useSelector } from 'react-redux'
 
-import DetailInfos from './c-cpns/detail-infos'
+// import DetailInfos from './c-cpns/detail-infos'
 import DetailPictures from './c-cpns/detail-pictures'
 import { DetailWrapper } from './style'
 
@@ -22,7 +22,7 @@ const Detail = memo(() => {
   return (
     <DetailWrapper>
       {isEmptyO(detailInfo) && <DetailPictures detailInfo={detailInfo} />}
-      <DetailInfos />
+      {/* <DetailInfos /> */}
     </DetailWrapper>
   )
 })

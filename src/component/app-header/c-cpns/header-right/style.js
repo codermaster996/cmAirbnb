@@ -63,7 +63,7 @@ export const RightWrapper = styled.div`
       box-shadow: 0 0 6px rgb(0,0,0,.1);
       color: ${props => props.theme.text.secondaryColor};
 
-      .top,.bottom{
+      .panel-top,.bottom{
         padding: 8px 0;
         
         .register{
@@ -82,7 +82,7 @@ export const RightWrapper = styled.div`
         }
       }
 
-      .top{
+      .panel-top{
         border-bottom: 1px solid #ddd;
       }
     }
