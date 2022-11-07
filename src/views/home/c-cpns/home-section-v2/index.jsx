@@ -9,7 +9,7 @@ import SectionFooter from '@/component/section-footer'
 
 const HomeSectionV2 = memo((props) => {
   /** 从props 获取数据 */
-  const { infoData = {} } = props
+  const { infoData } = props
 
   /** 定义内部的state */
   const initiaName = Object.keys(infoData.dest_list)[0]
