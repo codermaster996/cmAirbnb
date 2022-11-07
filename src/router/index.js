@@ -9,11 +9,11 @@ const Detail = React.lazy(() => import("@/views/detail"));
 const router = [
   {
     path: '/',
-    element: <Home />
+    element: <Navigate to='/home' />
   },
   {
     path: '/home',
-    element: <Navigate to='/' />
+    element: <Home />
   },
   {
     path: '/entire',
@@ -26,7 +26,7 @@ const router = [
   // 重定向
   {
     path: '*',
-    element: <Navigate to='/' />
+    element: <Navigate to='/home' />
   }
 ]
 

@@ -6,11 +6,12 @@ import entireReducer from './modules/entire'
 import detailReducer from './modules/detail'
 
 const store = configureStore({
+  devTools: false,
   reducer: {
     main: mainReducer,
     home: homeReducer,
     entire: entireReducer,
-    detail: detailReducer,
+    detail: detailReducer
   }
 })
 
